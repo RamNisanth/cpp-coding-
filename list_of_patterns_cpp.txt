@@ -1,0 +1,169 @@
+/*
+solid rectangle-0
+Hollow rectangel-1
+half pyramid-2
+inverted half pyramid-3
+Hollow inverteed pyramid-4
+full-pyramid-5
+inverted full pyramid-6
+hollow full pyramid-7
+
+*/
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int h,b,j;
+    cout<<"enter your height and breath: ";
+    cin>>h>>b;
+    
+    //Solid rectangle
+    
+    for(int i=0;i<h;i++)
+    {
+        for(int j=0;j<b;j++)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    
+    //Hollow Rectangle
+    
+     for(int i=0;i<h;i++)
+    {
+        for(int j=0;j<b;j++)
+        {
+            if((i==0)||(i==h-1)||(j==0)||(j==b-1))
+            {
+                cout<<"*";
+            }
+            else
+            {
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    
+    //half pyramid
+    
+    for(int i=0;i<=h;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+          cout<<"*"; 
+        }
+        cout<<endl;
+    }
+    
+    //Hollow half pyramid
+    
+     for(int i=0;i<=h;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+           if((j==i)||(j==0)||(i==h)||(j==h))
+            {
+                cout<<"*";
+            }
+            else
+            {
+                cout<<" ";
+            } 
+        }
+        cout<<endl;
+    }
+    
+    //inverted pyramid
+    
+     for(int i=h;i>=0;i--)
+    {
+        for(int j=i;j>=0;j--)
+        {
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    
+    //inverted Hollow pyramid
+    
+     for(int i=h;i>=0;i--)
+    {
+        for(int j=i;j>=0;j--)
+        {
+            if((j==i)||(j==0)||(i==h)||(j==h))
+            {
+                cout<<"*";
+            }
+            else
+            {
+                cout<<" ";
+            } 
+        }
+        cout<<endl;
+    }
+    
+    //full pyramid
+
+ for(int i=0;i<h;i++)
+  {
+      for(int j=h-i-1;j>0;j--)
+      {
+          cout<<" ";
+      }
+      for(int k=0;k<=2*i;k++)
+      {
+          cout<<"*";
+      }
+      cout<<endl;
+  }
+  
+  cout<<endl;
+    
+    //inverted pyramid
+    
+ for(int i=h;i>=0;i--)
+ {
+    for(int j=0;j<2*i-1;j++)
+    {
+        cout<<"*";
+    }
+    cout<<endl;
+    for(int j=0;j<h-i+1;j++)
+    {
+        cout<<" ";
+    }
+ }
+
+//Hollow pyramid
+
+  for(int i=0;i<h;i++)
+   {
+       for(int j=h-i-1;j>0;j--)
+       {
+           cout<<" ";
+       }
+       for(int k=0;k<=2*i;k++)
+       {
+           if((k==0)||(k==2*i)||(i==h-1))
+          {
+            cout<<"*";
+          }
+          else
+          {
+              cout<<" "; 
+          }
+       }
+       cout<<endl;
+   }
+    
+   
+
+    return 0;
+}

@@ -1,0 +1,42 @@
+//printing prime_numbers in a range (a,b)
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,flag=1;
+    int status=0;
+    cout<<"enter your numbers: ";
+    cin>>a>>b;
+    cout<<"First number: "<<a<<endl;
+    cout<<"second number: "<<b<<endl;
+    for(int i=a;i<=b;i++)
+    {
+        for(int j=2;j<i/2+1;j++)
+        {
+            flag=1;
+            
+            if(i%j==0)
+            {
+                
+                flag=0;
+                break;
+            }
+        }
+        
+        if(flag)
+        {
+            status=1;
+            cout<<i<<endl;
+        }
+    }
+    if(status==0)
+    {
+        cout<<"There is no prime number in the range given!!!";
+    }
+    
+
+    return 0;
+}
